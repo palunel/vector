@@ -37,7 +37,7 @@ class Vector:
             product = self.length * other
         except TypeError as ex:
             print(ex)
-            print("\nBuilt in mulitplication only valid for scalar values only.  For dot product or cross products, use respective functions.")
+            print("\nBuilt in mulitplication only valid for scalar values.  For dot product or cross products, use respective functions.")
         else:
             return Vector(product, self.theta, self.phi)
 
