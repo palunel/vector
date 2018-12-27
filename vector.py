@@ -77,7 +77,6 @@ class Vector:
             c_self[1]*c_other[1] + c_self[2]*c_other[2]
 
     def cross(self, other):
-
         c_self = self.to_cartesian()
         c_other = other.to_cartesian()
         cross_x = c_self[1]*c_other[2] - c_self[2]*c_other[1]
