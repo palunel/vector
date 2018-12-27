@@ -37,7 +37,7 @@ class Vector:
             product = self.length * other
         except TypeError as ex:
             print(ex)
-            print("\nBuilt in mulitplication only valid for scalar values.  For dot product or cross products, use respective functions.")
+            print("\nBuilt in mulitplication only valid with scalar values.  For dot product or cross product, use respective dot and cross functions.")
         else:
             return Vector(product, self.theta, self.phi)
 
@@ -58,6 +58,9 @@ class Vector:
 
     def __ge__(self, other):
         return self.__eq__(other) or self.__gt__(other)
+
+    def is_equal_to(self, other):
+        return self.length == other.length and self.theta == other.theta and self.phi == other.phi
 
     def to_cartesian(self):
         r = self.length
@@ -86,3 +89,9 @@ class Vector:
 
     def vector_angle(self, other):
         return math.degrees(math.acos(self.dot(other)/(self.length * other.length)))
+
+
+vector1 = Vector(102, 91, 45)
+vector2 = Vector(102, 91, 45)
+
+print(vector1.is_equal_to(vector2))
