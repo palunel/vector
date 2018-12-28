@@ -42,7 +42,7 @@ class Vector:
             return Vector(product, self.theta, self.phi)
 
     def __div__(self, other):
-        # TODO not called.
+        # TODO not called need to fix
         try:
             division = self.length / other
         except TypeError as ex:
